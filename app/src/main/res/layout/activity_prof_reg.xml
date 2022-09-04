@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".prof_reg">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:background="@color/green_blue"
+        android:paddingTop="40sp"
+        android:text="@string/prof_reg_txt"
+        android:textAlignment="center"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="340dp"
+        android:layout_height="53dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:hint="@string/prof_reg_email"
+        android:inputType="textEmailAddress|textNoSuggestions"
+        android:paddingStart="12dp"
+        android:textColor="#F7221616"
+        android:textCursorDrawable="@drawable/textbox_cursor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.530"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.060000002"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/prof_reg_pass"
+        android:layout_width="340dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:hintEnabled="false"
+        app:endIconMode="password_toggle">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reg_pass_edittx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="15"
+            android:inputType="textVisiblePassword|textNoSuggestions"
+            android:background="@drawable/custom_input"
+            android:hint="@string/reg_pass"
+            android:paddingTop="8dp"
+            android:textSize="20sp"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/name_txt"
+        android:inputType="textVisiblePassword|textNoSuggestions"
+        android:padding="12dp"
+        android:textColor="#F7221616"
+        android:textCursorDrawable="@drawable/textbox_cursor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prof_reg_pass"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.52" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/last_name_txt"
+        android:inputType="textVisiblePassword|textNoSuggestions"
+        android:padding="12dp"
+        android:textColor="#F7221616"
+        android:textCursorDrawable="@drawable/textbox_cursor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.52"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gender_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:hint="@string/dropdown_gender"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintTop_toBottomOf="@id/last_name">
+
+        <AutoCompleteTextView
+            android:id="@+id/prof_gender_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textSize="17sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/subjCode_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:hint="@string/dropdown_subjCode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender_layout"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintHorizontal_bias="0.52">
+
+        <AutoCompleteTextView
+            android:id="@+id/subjCode_prof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textSize="17sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dept_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:hint="@string/dropdown_dept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subjCode_layout"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintHorizontal_bias="0.52">
+
+        <AutoCompleteTextView
+            android:id="@+id/prof_dept_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textSize="17sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dept_layout"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp">
+
+
+        <Button
+            android:id="@+id/reg_back_btn"
+            android:layout_width="130sp"
+            android:layout_height="61dp"
+            android:backgroundTint="#91A592"
+            android:text="@string/reg_back_btn"
+            android:textAllCaps="true"
+            android:layout_marginEnd="40dp"/>
+
+        <Button
+            android:id="@+id/reg_btn"
+            android:layout_width="130sp"
+            android:layout_height="61dp"
+            android:backgroundTint="#3DB142"
+            android:text="@string/reg_btn"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".student_reg">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:background="@color/green_blue"
+        android:paddingTop="40sp"
+        android:text="@string/stud_reg_txt"
+        android:textAlignment="center"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <EditText
+        android:id="@+id/stud_reg_email"
+        android:layout_width="340dp"
+        android:layout_height="53dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:hint="@string/stud_reg_email_txt"
+        android:inputType="textEmailAddress|textNoSuggestions"
+        android:paddingStart="12dp"
+        android:textColor="#F7221616"
+        android:textCursorDrawable="@drawable/textbox_cursor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.112"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reg_pass"
+        android:layout_width="340dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stud_reg_email"
+        app:layout_constraintVertical_bias="0.05"
+        app:hintEnabled="false"
+        app:endIconMode="password_toggle">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reg_pass_edittx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_input"
+            android:ems="15"
+            android:hint="@string/reg_pass"
+            android:inputType="textVisiblePassword|textNoSuggestions"
+            android:paddingTop="8dp"
+            android:textSize="20sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="170sp"
+        android:layout_height="51dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/name_txt"
+        android:inputType="textVisiblePassword|textNoSuggestions"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:textColor="#F7221616"
+        android:textCursorDrawable="@drawable/textbox_cursor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.090"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_pass"
+        app:layout_constraintVertical_bias="0.06999999" />
+
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="170sp"
+        android:layout_height="51dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/last_name_txt"
+        android:inputType="textVisiblePassword|textNoSuggestions"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:textColor="#F7221616"
+        android:textCursorDrawable="@drawable/textbox_cursor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/reg_pass"
+        app:layout_constraintVertical_bias="0.06999999" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gender_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="154dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:hint="@string/dropdown_gender"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0060">
+
+        <AutoCompleteTextView
+            android:id="@+id/gender_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/course_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="154dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:hint="@string/dropdown_course"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toEndOf="@+id/gender_layout"
+        app:layout_constraintTop_toBottomOf="@+id/last_name"
+        app:layout_constraintVertical_bias="0.0060">
+
+        <AutoCompleteTextView
+            android:id="@+id/course_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/year_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="154dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:hint="@string/dropdown_year"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender_layout"
+        app:layout_constraintVertical_bias="0.0060">
+
+        <AutoCompleteTextView
+            android:id="@+id/year_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/section_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="154dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:hint="@string/dropdown_section"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toEndOf="@+id/year_layout"
+        app:layout_constraintTop_toBottomOf="@+id/course_layout"
+        app:layout_constraintVertical_bias="0.0060"
+        android:enabled="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/section_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/section_layout"
+        app:layout_constraintVertical_bias="0.36">
+
+
+        <Button
+            android:id="@+id/reg_back_btn"
+            android:layout_width="130sp"
+            android:layout_height="61dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#91A592"
+            android:text="@string/reg_back_btn"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/reg_btn"
+            android:layout_width="130sp"
+            android:layout_height="61dp"
+            android:backgroundTint="#3DB142"
+            android:text="@string/reg_btn"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

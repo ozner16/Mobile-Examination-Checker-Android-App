@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scanner">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_holder"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textMultiLine|textVisiblePassword|textNoSuggestions"
+            android:text="Create an answer key before scanning the exam"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:hint=""
+            android:background="@null"
+            tools:ignore="LabelFor"
+            android:autofillHints="" />
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/linear_holder"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/button_answer_key"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="answer key"
+            style="Widget.AppCompat.Button.Borderless"
+            android:layout_margin="8dp"/>
+        
+        <Button
+            android:id="@+id/button_capture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Capture"
+            style="Widget.AppCompat.Button.Borderless"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/button_check_exam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Check exam"
+            style="Widget.AppCompat.Button.Borderless"
+            android:layout_margin="8dp"/>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "989596453095",
+    "project_id": "mobile-exam-checker-ed22e",
+    "storage_bucket": "mobile-exam-checker-ed22e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989596453095:android:763d059ecbb7c48b2d7a42",
+        "android_client_info": {
+          "package_name": "com.mobileexaminationchecker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989596453095-e1ntk3rps2lepjo1nfe43iu83au8ji8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbm1-X9T3pGB5drf0U4_S1tcc9frlJcog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989596453095-e1ntk3rps2lepjo1nfe43iu83au8ji8c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".prof_scores"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:padding="10dp"
+        android:layout_marginTop="-25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/textUsername"
+            android:layout_width="100dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/grades"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="Exam Code:"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/plain_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:autofillHints=""
+            android:inputType="text"
+            android:padding="5dp"
+            tools:ignore="LabelFor" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+
+
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="480dp"
+        android:text="VIEW GRADES"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:layout_marginStart="120dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:background="@color/teal_200"
+        android:backgroundTint="#9EE4DC"/>
+
+</LinearLayout>
+
+
+
+
+
+

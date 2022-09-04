@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mobileexaminationchecker" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_new"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MobileExaminationChecker" >
+        <activity
+            android:name=".bar_graph"
+            android:exported="false" />
+        <activity
+            android:name=".item_analyzation"
+            android:exported="false" />
+        <activity
+            android:name=".prof_exam_records_40"
+            android:exported="false" />
+        <activity
+            android:name=".prof_exam_records_20"
+            android:exported="false" />
+        <activity
+            android:name=".stud_cosc110_exam_scores"
+            android:exported="false" />
+        <activity
+            android:name=".stud_gned10_exam_scores"
+            android:exported="false" />
+        <activity
+            android:name=".stud_gned07_exam_scores"
+            android:exported="false" />
+        <activity
+            android:name=".answer_key"
+            android:exported="false" />
+        <activity
+            android:name=".scanner"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+        <activity
+            android:name=".stud_exam_form_two"
+            android:exported="false" />
+        <activity
+            android:name=".prof_create_exam_two"
+            android:exported="false" />
+        <activity
+            android:name=".prof_scores"
+            android:exported="false" />
+        <activity
+            android:name=".stud_scores"
+            android:exported="false" />
+        <activity
+            android:name=".prof_scanner"
+            android:exported="false" />
+        <activity
+            android:name=".prof_create_exam_recycleview"
+            android:exported="false" />
+        <activity
+            android:name=".stud_exam_form"
+            android:exported="false" />
+        <activity
+            android:name=".stud_take_exam"
+            android:exported="false" />
+        <activity
+            android:name=".prof_create_exam"
+            android:exported="false" />
+        <activity
+            android:name=".stud_change_pass"
+            android:exported="false" />
+        <activity
+            android:name=".stud_edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".stud_profile"
+            android:exported="false" />
+        <activity
+            android:name=".prof_change_pass"
+            android:exported="false" />
+        <activity
+            android:name=".prof_edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".prof_profile"
+            android:exported="false" />
+        <activity
+            android:name=".prof_home"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".stud_home"
+            android:exported="false" />
+        <activity
+            android:name=".prof_reg"
+            android:exported="false" />
+        <activity
+            android:name=".student_reg"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>
